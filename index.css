@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap");
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    font-family: "Montserrat";
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.Space{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Link{
+    text-decoration: none;
+}
+
+/*Start Of NavBar*/
+
+.content .Nav{
+    position: relative;
+    width: 100%;
+    background-color: lightblue;
+    height: fit-content;
+    padding-bottom: 30px;
+}
+.content .Nav img{
+    float:left;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.content .Nav p{
+    float: left;
+    height: inherit;
+    margin-left: 10px;
+    font-size: 25px;
+}
+
+
+.content .Nav .SearchBar{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+    background-color: white;
+    border-radius: 25px;
+    top: 15px;
+    padding: 5px;
+}
+
+.content .Nav .SearchBar input{
+    width: 350px;
+    height: 35px;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+
+
+.content .Nav .SearchBar button{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-right: 5px;
+}
+
+.content .Nav .SearchBar button:hover{
+ transform: scale(1.05);
+ cursor: pointer;
+}
+
+
+.content .Nav .JoinDiscord{
+    position: absolute;
+    display: block;
+    float: right;
+    right: 0;
+}
+
+.content .Nav .JoinDiscord .Dis{
+    margin-top: -34px;
+    margin-right: 25px;
+}
+
+.content .Nav .JoinDiscord:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/*Start of mobile responsiveness NAVBAR*/
+@media screen and (max-width: 1100px) {
+    .content .Nav{
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        margin: 0px;
+        background-color: lightblue;
+    }
+
+    .content .Nav .LogoPart{
+        width: 100%;
+        height: 100px;
+        background-color: lightblue;
+        padding: 10px;
+    }
+
+    .content .Nav a{
+        text-decoration: none;
+    }
+
+    .content .Nav .LogoPart .logo{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .JoinDiscord{
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        display: block;
+        margin-top: auto;
+        margin-right: auto;
+        margin-top:-65px;
+    }
+
+    .content .Nav .JoinDiscord .Dis{
+        display: block;
+        height: 45px;
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content .Nav .LogoPart p{
+        float:none;
+        text-align: center;
+    }
+    
+    .content .Nav .SearchBar{
+        width: 100%;
+        margin-top: 100px;
+        height: 45px;
+    }
+
+    .content .Nav .SearchBar{
+        width: fit-content;
+        background-color: white;
+    }
+    .content .Nav .SearchBar input{
+        width: fit-content;
+        background-color: white;
+    }
+}
+/*End of mobile responsiveness NAVBAR*/
+/*End of Nav Bar*/
+
+/*Start of Random Item*/
+.RandomItemPart{
+    margin-top: 100px;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+}
+
+.RandomItemPart .RandomButton{
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+
+.content .RandomItem{
+    display: block;
+    width: 400px;
+    height: 450px;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.ANIMATION{
+    animation-name: random;
+    animation-duration: 0.5s;
+}
+
+/*ANIMATION*/
+@keyframes random {
+    0% {transform: scale(1);}
+    50% {transform: scale(1);}
+    75% {transform: scale(1.025);}
+    100% {transform: scale(1);}
+}
+/*ANIMATION*/
+
+.content .RandomItem .ItemName{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.content .RandomItem .ItemDesc{
+    margin-top: -10px;
+    text-align: center;
+    font-size: 15px;
+}
+.content .RandomItem .ItemPrice{
+    margin-top: -15px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.content .RandomItem .CardImage{
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+    height: 275px;
+    border-radius: 25px;
+
+    border: 2px solid black;
+}
+
+.content .RandomItem button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 150px;
+    height: 30px;
+    border:none;
+    border-radius: 25px;
+    background-color: lightgray;
+}
+
+.content .RandomItem button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.RandomItemPart{
+    width: 100%;
+}
+
+.RandomItemPart .ToItemsButton{
+    width: 95px;
+    margin-top: -25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Start of Random Item mobile responsiveness*/
+@media screen and (max-width: 400px) {
+    .content .RandomItem{
+        display: block;
+        width: 350px;
+        height: 450px;
+        background-color: #f1f1f1;
+        border-radius: 25px;
+        box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .content .RandomItem button{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        width: 150px;
+        height: 30px;
+        border:none;
+        border-radius: 25px;
+    }
+    
+    .content .RandomItem button:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+/*End of Random Item mobile responsiveness*/
+/*End of Random Item*/
+
+/*More Items Part*/
+.RandomItemPart .MoreItems{
+    margin-top:100px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.MoreItemsA{
+    text-decoration: none;
+}
+
+.RandomItemPart .MoreItemsPart{
+    background-color: transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width: 100%;
+}
+
+.RandomItemPart .MoreItemsPart:hover{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+/*More Items Part*/
+/*Start of Items*/
+.Item{
+    width: 350px;
+    height: 450px;
+    background-color: #f1f1f1;
+    display: block;
+    border-radius: 25px;
+    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
+.Item:hover{
+    transform: scale(1.01);
+}
+
+.Item .Name{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.Item .Desc{
+    text-align: center;
+    margin-top: -20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
+}
+
+.Item .Price{
+    text-align: center;
+    margin-top: -15px;
+}
+
+.Item .Image{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    width: 275px;
+    height: 275px;
+
+    border: 2px solid black;
+}
+
+.Item .CheckOut{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 25px;
+    border-radius: 25px;
+    border: none;
+    width: fit-content;
+    background-color: lightgray;
+}
+
+.Item .CheckOut:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/*Start of Items responsiveness*/
+.content .PopularItems{
+    width: 100%;
+    background-color: white;
+    position: relative;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+}
+
+.content .PopularItems:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content .PopularItems .column{
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (max-width: 400px) {
+
+    .content .PopularItems{
+        width: 100%;
+        position: relative;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+        justify-items: center;
+    }
+
+    .Item{
+        display: block;
+        width:300px;
+        height: fit-content;/*450px*/
+        padding-bottom: 25px;
+        background-color: #f1f1f1;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        float: none;
+        border-radius: 25px;
+        box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+    }
+    
+    .Item .Name{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 25px;
+    }
+    
+    .Item .Desc{
+        text-align: center;
+        margin-top: -20px;
+    }
+    
+    .Item .Price{
+        text-align: center;
+        margin-top: -15px;
+    }
+    
+    .Item .Image{
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+        width: 275px;
+        height: 275px;
+    }
+    
+    .Item .CheckOut{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        margin-top: 25px;
+        border-radius: 25px;
+        border: none;
+        width: fit-content;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .Item .CheckOut:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+/*End of Items responsiveness*/
+/*End of Items*/
+
+.PopulairText{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.RecentlyAddedText{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.MoreButton{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: fit-content;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.MoreButton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.MoreButton button{
+    width: fit-content;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    border: 2px solid black;
+    outline:0;
+}
+
+.MoreButton button:hover{
+    cursor: pointer;
+}
+
+.Footer{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: -25px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuffToBuy</title>
+    <link type="text/css" rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="content">
+
+        <div class="Nav">
+            <a href="/?Page=1"><div class="LogoPart">
+                <img class="logo" src="./Storage/DarkArcticRound.png" />
+                <p>Stuff To Buy</p>
+            </div></a>
+
+            <div class="SearchBar">
+                <input id="S" type="text" placeholder="Search">
+                <a  id="SBtn"><button id="Search" onclick="SearchThis()" class="SBtn"><i class="fa fa-search"></i></button></a>
+            </div>
+
+            <div class="JoinDiscord">
+                <img class="Dis" src="./Storage/JoinDiscord.png" />
+            </div>
+        </div>
+
+        <div class="RandomItemPart">
+            <div class="RandomItem" id="RItem">
+            </div>
+
+            <button class="RandomButton" id="rbtn" onclick="GetRandom()">Random Item</button>
+
+            <div class="MoreItemsPart">
+                <a class="MoreItemsA" href="#POPULAR"><p class="MoreItems">More Items</p>
+                <svg class="ToItemsButton" xmlns="http://www.w3.org/2000/svg" width="122.898" height="78.986" viewBox="0 0 122.898 78.986">
+                    <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down" d="M65.159,62.929l44.579-48.966a7.875,7.875,0,0,1,11.9,0,9.984,9.984,0,0,1,0,13.1L71.126,82.539a7.88,7.88,0,0,1-11.619.27L8.645,27.1a9.957,9.957,0,0,1,0-13.1,7.875,7.875,0,0,1,11.9,0Z" transform="translate(-3.688 -8.746)" fill="#fff" stroke="#000" stroke-width="5"/>
+                </svg><a>        
+            </div>
+        </div>
+
+        <hr class="Space">
+
+        <p class="PopulairText" id="POPULAR">Popular</p>
+
+        <div class="PopularItems" id="PopularAppend">
+
+        </div>
+
+        <hr class="Space">
+
+        <p class="RecentlyAddedText">Products</p>
+        <div class="PopularItems" id="RECENT">
+                
+        </div>
+
+        <div class="MoreButton">
+            <a id="NButton"><button>MORE</button></a>
+        </div>
+        <hr class="Space">
+
+        <div class="Footer">
+            <p class="left">&copy; Name Of Site</p>
+            <p class="center">By <a href="https://www.arcticstudio.info" target="_blank">Arctic Studio</a></p>
+            <p class="right"><a href="./privacypolicy.html">Privacy Policy</a></p>
+        </div>
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>
+<script src="./search.js"></script>

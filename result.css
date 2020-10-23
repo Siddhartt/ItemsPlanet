@@ -1,0 +1,9 @@
+.SearchResults{
+    width: 100%;
+}
+
+.SearchResults .Res{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 75px;
+}

@@ -1,0 +1,30 @@
+.content .Message{
+    display: block;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: white;
+}
+
+.content .Message .viernulvier{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.content .Message .msg{
+    font-size: 25px;
+}
+
+.content .Message .Again{
+    font-size: 25px;
+    border-radius: 25px;
+    border:2px solid black;
+    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.377);
+}
