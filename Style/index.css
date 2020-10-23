@@ -5,7 +5,7 @@ html,body{
     padding: 0px;
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: #f9f9f9;
     font-family: "Montserrat";
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -16,9 +16,11 @@ a{
 }
 
 .Space{
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 25px;
 }
 
 .Link{
@@ -40,9 +42,10 @@ a{
     margin-top: 5px;
 }
 
-.content .Nav p{
+.content .Nav h1{
     float: left;
     height: inherit;
+    margin-top: 20px;
     margin-left: 10px;
     font-size: 25px;
 }
@@ -148,7 +151,7 @@ a{
         margin-right: auto;
     }
 
-    .content .Nav .LogoPart p{
+    .content .Nav .LogoPart h1{
         float:none;
         text-align: center;
     }
@@ -174,7 +177,7 @@ a{
 /*Start of Random Item*/
 .RandomItemPart{
     margin-top: 100px;
-    background-color: white;
+    background-color: #f9f9f9;
     width: 100%;
     height: fit-content;
 }
@@ -196,9 +199,9 @@ a{
     display: block;
     width: 400px;
     height: 450px;
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
     border-radius: 25px;
-    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.158);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -280,7 +283,7 @@ a{
         display: block;
         width: 350px;
         height: 450px;
-        background-color: #f1f1f1;
+        background-color: #f9f9f9;
         border-radius: 25px;
         box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
         margin-left: auto;
@@ -343,16 +346,16 @@ a{
 .Item{
     width: 350px;
     height: 450px;
-    background-color: #f1f1f1;
+    background-color: #f9f9f9;
     display: block;
     border-radius: 25px;
-    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+    box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.158);
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+
+    margin-top: 50px;
 }
-
-
 
 .Item:hover{
     transform: scale(1.01);
@@ -408,13 +411,15 @@ a{
 
 /*Start of Items responsiveness*/
 .content .PopularItems{
-    width: 100%;
-    background-color: white;
+    width: 90%;/*100%*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
     position: relative;
     height: fit-content;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 0px;
     align-items: stretch;
     justify-items: center;
 }
@@ -452,13 +457,13 @@ a{
         width:300px;
         height: fit-content;/*450px*/
         padding-bottom: 25px;
-        background-color: #f1f1f1;
+        background-color: #f9f9f9;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
         float: none;
         border-radius: 25px;
-        box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.336);
+        box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.158);
     }
     
     .Item .Name{
