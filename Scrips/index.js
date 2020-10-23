@@ -20,6 +20,9 @@ function MoreButton() {
                     var url = new URL(window.location.href)
                     var page = parseInt(url.searchParams.get("Page"))
                     MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
+                }else{
+                    MoreButtonDiv.innerHTML += '<p>You have reached the end!</p>'
+                    MoreButtonDiv.innerHTML += `<a id="NButton" href="/?Page=1"><button>Back to the main page</button></a>`
                 }
             } else if (Pages > 1) {
                 MoreButtonDiv.innerHTML = '<a id="NButton" href="/?Page=2"><button>MORE</button></a>'
