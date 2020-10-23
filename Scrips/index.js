@@ -15,8 +15,12 @@ function MoreButton() {
 
             if (document.URL.includes("?Page=") && (Pages > 1)) {
                 var url = new URL(window.location.href)
-                var page = parseInt(url.searchParams.get("Page"))
-                MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
+                var P = url.searchParams.get("Page")
+                if (parseInt(Pages) != parseInt(P)) {
+                    var url = new URL(window.location.href)
+                    var page = parseInt(url.searchParams.get("Page"))
+                    MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
+                }
             } else if (Pages > 1) {
                 MoreButtonDiv.innerHTML = '<a id="NButton" href="/?Page=2"><button>MORE</button></a>'
             }
