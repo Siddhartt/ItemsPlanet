@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         </div>
                     </div>`
                 }
-                if((Object.keys(data).length) <= 1){
+                if ((Object.keys(data).length) <= 1) {
                     document.getElementById("ResultText").innerHTML = `<b>${(Object.keys(data).length)}</b> result found for <b>${s}</b>`
-                }else{
+                } else {
                     document.getElementById("ResultText").innerHTML = `${(Object.keys(data).length)} results found for ${s}`
-                }    
+                }
             }));
     }
 })

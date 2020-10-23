@@ -1,28 +1,38 @@
 document.addEventListener("DOMContentLoaded", function (event) {
-
-    //Next Page Part
-    if (document.URL.includes("/?Page=")) {
-        var page = document.URL.split("=")[1]
-        page = page.replace(/\D/g, "");
-        page = parseInt(page)
-    }
-
-    if (!page) {
-        page = 1
-    }
-    document.getElementById("NButton").href = `/?Page=${page + 1}`
-    //Next Page Part
+    MoreButton()
     GetRandom()
     Popular()
+    Load()
+});
+
+function MoreButton() {
+
+    fetch('https://api.arcticstudio.info:8443/api/Items/Total/')
+        .then(response => response.json())
+        .then((data => {
+            var MoreButtonDiv = document.getElementById("MoreButton")
+            var Pages = data[0].TotalPages
+
+            if (document.URL.includes("?Page=") && (Pages > 1)) {
+                var url = new URL(window.location.href)
+                var page = parseInt(url.searchParams.get("Page"))
+                MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
+            } else if (Pages > 1) {
+                MoreButtonDiv.innerHTML = '<a id="NButton" href="/?Page=1"><button>MORE</button></a>'
+            }
+        }))
+}
+
+function Load() {
     if (document.URL.includes("/?Page=")) {
         var page = document.URL.split("=")[1]
 
         fetch('https://api.arcticstudio.info:8443/api/ItemsForWebsite/' + page)
-        .then(response => response.json())
-        .then((data => {
-            var AppendTo = document.getElementById("RECENT")
-            for (var x = 0; x < (Object.keys(data.Items).length); x++) {
-                AppendTo.innerHTML += `
+            .then(response => response.json())
+            .then((data => {
+                var AppendTo = document.getElementById("RECENT")
+                for (var x = 0; x < (Object.keys(data.Items).length); x++) {
+                    AppendTo.innerHTML += `
             <div class="column">
                 <div class="Item">
                     <p class="Name">${data.Items[x].ItemName}</p>
@@ -32,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     <a class="Link" href="${data.Items[x].Link}" target="_blank"><button class="CheckOut">Check Out</button></a>
                 </div>
             </div>`
-            }
-        }));
+                }
+            }));
     } else {
         fetch('https://api.arcticstudio.info:8443/api/ItemsForWebsite/' + 1)
             .then(response => response.json())
@@ -53,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 }
             }));
     }
-});
+}
 
 function GetRandom() {
     document.getElementById("rbtn").disabled = true;
@@ -62,7 +72,7 @@ function GetRandom() {
         .then(response => response.json())
         .then((data) => {
             var json = data
-            var RandomPage = Math.floor(Math.random() * json[0].TotalPages +1)
+            var RandomPage = Math.floor(Math.random() * json[0].TotalPages + 1)
             fetch('https://api.arcticstudio.info:8443/api/ItemsForWebsite/' + RandomPage)
                 .then(response => response.json())
                 .then((data) => {
