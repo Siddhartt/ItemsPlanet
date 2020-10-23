@@ -62,7 +62,7 @@ function GetRandom() {
         .then(response => response.json())
         .then((data) => {
             var json = data
-            var RandomPage = Math.floor(Math.random() * data.TotalPages + 1)
+            var RandomPage = Math.floor(Math.random() * json[0].TotalPages +1)
             fetch('https://api.arcticstudio.info:8443/api/ItemsForWebsite/' + RandomPage)
                 .then(response => response.json())
                 .then((data) => {
