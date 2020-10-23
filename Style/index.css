@@ -23,6 +23,14 @@ a{
     margin-bottom: 25px;
 }
 
+.NavSpace{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
 .Link{
     text-decoration: none;
 }
@@ -32,7 +40,7 @@ a{
 .content .Nav{
     position: relative;
     width: 100%;
-    background-color: lightblue;
+    background-color:  #f9f9f9;
     height: fit-content;
     padding-bottom: 30px;
 }
@@ -65,7 +73,7 @@ a{
 }
 
 .content .Nav .SearchBar input{
-    width: 350px;
+    width: 750px;
     height: 35px;
     border-radius: 25px;
     outline: none;
@@ -112,18 +120,26 @@ a{
         width: 100%;
         height: fit-content;
         margin: 0px;
-        background-color: lightblue;
+        background-color:  #f9f9f9;
     }
 
     .content .Nav .LogoPart{
         width: 100%;
         height: 100px;
-        background-color: lightblue;
+        background-color:  #f9f9f9;
         padding: 10px;
     }
 
     .content .Nav a{
         text-decoration: none;
+    }
+
+    .content .Nav .SearchBar input{
+        width: 350px;
+        height: 35px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
     }
 
     .content .Nav .LogoPart .logo{
