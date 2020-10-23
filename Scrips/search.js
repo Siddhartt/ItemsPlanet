@@ -1,7 +1,9 @@
 function SearchThis() {
     var ST = document.getElementById("S").value
     if (!ST) return;
-    document.getElementById("SBtn").href = `/Result.html?Search=${ST}`
+    console.log(ST.trim())
+    if( ST.trim() === "") return;
+    document.getElementById("SBtn").href = `/Result.html?Search=${ST.trim()}`
 }
 
 document.addEventListener("DOMContentLoaded", function (event) {
