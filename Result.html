@@ -27,7 +27,7 @@
 
             <div class="SearchBar">
                 <input id="S" type="text" placeholder="Search">
-                <a  id="SBtn"><button id="Search" onclick="SearchThis()" class="SBtn"><i class="fa fa-search"></i></button></a>
+                <a  id="SBtn"><button aria-label="Search" id="Search" onclick="SearchThis()" class="SBtn"><i class="fa fa-search"></i></button></a>
             </div>
 
             <div class="JoinDiscord">
@@ -43,10 +43,20 @@
         </div>
 
         <div class="MoreButton">
-            <a href="/"><button>Back to main page</button></a>
+            <a href="/"><button aria-label="Back to the main page">Back to main page</button></a>
         </div>
     </div>
 </body>
 </html>
 <script src="./Scrips/result.js"></script>
 <script src="./Scrips/search.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-136474655-2', 'auto');
+    ga('send', 'pageview', 'result');
+</script>
