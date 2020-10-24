@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 function MoreButton() {
-
     fetch('https://api.arcticstudio.info:8443/api/Items/Total/')
         .then(response => response.json())
         .then((data => {

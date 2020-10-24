@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (document.URL.includes("?Search=")) {
         var url = new URL(window.location.href)
         var s = url.searchParams.get("Search")
+        document.getElementById("Title").innerHTML = `Stuff To Buy - Results for ${s}- Official Website`
         fetch("https://api.arcticstudio.info:8443/api/items/Search/" + s)
             .then(response => response.json())
             .then((data => {
