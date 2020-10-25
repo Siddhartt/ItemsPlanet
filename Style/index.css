@@ -574,9 +574,15 @@ a{
 }
 
 .Footer{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: -25px;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .Footer{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: -25px;
+    }
 }
