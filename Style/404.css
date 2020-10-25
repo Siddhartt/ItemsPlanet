@@ -28,3 +28,8 @@
     border:2px solid black;
     box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.377);
 }
+
+.content .Message .Again:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
