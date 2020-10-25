@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: itemsplanet.com
+Token: fd231e8c347b4998cb3028e280894b18fe0301e11485c70a066a73174652645c
