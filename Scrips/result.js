@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var url = new URL(window.location.href)
         var s = url.searchParams.get("Search")
         document.getElementById("Title").innerHTML = `Stuff To Buy - Results for ${s}- Official Website`
+        document.getElementById('CONTENTLINK').content = `https://itemsplanet.com/result?Search=${s}`
         fetch("https://api.arcticstudio.info:8443/api/items/Search/" + s)
             .then(response => response.json())
             .then((data => {
