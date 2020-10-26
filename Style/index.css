@@ -191,6 +191,42 @@ a{
 /*End of mobile responsiveness NAVBAR*/
 /*End of Nav Bar*/
 
+
+/*START CATEGORIES PART*/
+
+    .content .Categories{
+        width: 100%;
+        height: fit-content;
+        background-color: #f9f9f9;
+    }
+
+    .content .Categories .CatCards{
+        text-align: center;
+
+    }
+
+    .content .Categories .CatCards .CatCard{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .content .Categories .CatCards .CatCard a button{
+        width: 250px;
+        height: 50px;
+        border-radius: 15px;
+        border: none;
+        background-color: aquamarine;
+        box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.158);
+    }
+
+    .content .Categories .CatCards .CatCard a button:hover{
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+/*END CATEGORIES PART*/
+
+
 /*Start of Random Item*/
 .RandomItemPart{
     margin-top: 100px;

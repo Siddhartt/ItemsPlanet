@@ -1,9 +1,67 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+    CheckPage()
+    CatAndPop()
     MoreButton()
     GetRandom()
-    Popular()
     Load()
 });
+
+function CheckPage(){
+    if (document.URL.includes("?Page=")){
+        fetch('https://api.arcticstudio.info:8443/api/Items/Total/')
+        .then(response => response.json())
+        .then((data => {
+            var Pages = data[0].TotalPages
+            var url = new URL(window.location.href)
+            var P = url.searchParams.get("Page")
+            if(P == 1){
+                Popular()
+            }
+            if(P > Pages){
+                window.location.replace("/404.html");
+            }
+        }))
+    }else{
+        Popular()
+    }
+}
+
+function CatAndPop(){
+    var PUSH = `<p class="PopulairText">Categories</p>
+    <div class="Categories" id="CATEGORIES">
+        <div class="CatCards">
+            <div class="CatCard">
+                <a><button>Items under $10</button></a>
+            </div>
+
+            <div class="CatCard">
+                <a><button>Items under $25</button></a>
+            </div>
+
+            <div class="CatCard">
+                <a><button>Items under $50</button></a>
+            </div>
+        </div>
+    </div>
+    <hr class="Space">
+
+    <p class="PopulairText" id="POPULAR">Popular</p>
+
+    <div class="PopularItems" id="PopularAppend">
+    </div>
+
+    <hr class="Space">`
+
+    if (document.URL.includes("?Page=")){
+        var url = new URL(window.location.href)
+        var P = url.searchParams.get("Page")
+        if(P == 1){
+            document.getElementById("PAGE1").innerHTML = PUSH
+        }
+    }else{
+        document.getElementById("PAGE1").innerHTML = PUSH
+    }
+}
 
 function MoreButton() {
     fetch('https://api.arcticstudio.info:8443/api/Items/Total/')
@@ -20,8 +78,8 @@ function MoreButton() {
                     var page = parseInt(url.searchParams.get("Page"))
                     MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
                 }else{
-                    MoreButtonDiv.innerHTML += '<p>You have reached the end!</p>'
-                    MoreButtonDiv.innerHTML += `<a id="NButton" href="/?Page=1"><button>Back to the main page</button></a>`
+                    MoreButtonDiv.innerHTML += `<a id="NButton" href="/?Page=1"><p>You have reached the end!</p>
+                    <button>Back to the main page</button></a>`
                 }
             } else if (Pages > 1) {
                 MoreButtonDiv.innerHTML = '<a id="NButton" href="/?Page=2"><button aria-label="More">MORE</button></a>'
