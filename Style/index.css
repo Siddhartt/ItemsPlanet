@@ -110,7 +110,7 @@ a{
 }
 
 .content .Nav .JoinDiscord:hover{
-    transform: scale(1.05);
+    transform: scale(1.025);
     cursor: pointer;
 }
 
@@ -208,6 +208,7 @@ a{
     .content .Categories .CatCards .CatCard{
         margin-top: 15px;
         margin-bottom: 15px;
+        
     }
 
     .content .Categories .CatCards .CatCard a button{
@@ -215,8 +216,10 @@ a{
         height: 50px;
         border-radius: 15px;
         border: none;
-        background-color: aquamarine;
+        background: rgb(192,255,255);
+        background: linear-gradient(45deg, rgba(192,255,255,1) 0%, rgba(223,255,230,1) 100%);
         box-shadow: 7px 21px 30px rgba(0, 0, 0, 0.158);
+        outline: none;
     }
 
     .content .Categories .CatCards .CatCard a button:hover{
@@ -245,6 +248,11 @@ a{
     text-align: center;
     border-radius: 25px;
     border: 1px solid black;
+}
+
+.RandomItemPart .RandomButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 

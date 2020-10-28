@@ -6,40 +6,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
     Load()
 });
 
-function CheckPage(){
-    if (document.URL.includes("?Page=")){
+function CheckPage() {
+    if (document.URL.includes("?Page=")) {
         fetch('https://api.arcticstudio.info:8443/api/Items/Total/')
-        .then(response => response.json())
-        .then((data => {
-            var Pages = data[0].TotalPages
-            var url = new URL(window.location.href)
-            var P = url.searchParams.get("Page")
-            if(P == 1){
-                Popular()
-            }
-            if(P > Pages){
-                window.location.replace("/404.html");
-            }
-        }))
-    }else{
+            .then(response => response.json())
+            .then((data => {
+                var Pages = data[0].TotalPages
+                var url = new URL(window.location.href)
+                var P = url.searchParams.get("Page")
+                if (P == 1) {
+                    Popular()
+                }
+                if (P > Pages) {
+                    window.location.replace("/404.html");
+                }
+            }))
+    } else {
         Popular()
     }
 }
 
-function CatAndPop(){
+function CatAndPop() {
     var PUSH = `<p class="PopulairText">Categories</p>
     <div class="Categories" id="CATEGORIES">
         <div class="CatCards">
             <div class="CatCard">
-                <a><button>Items under $10</button></a>
+                <a href="./ItemsUnder.html?u=10"><button>Items under $10</button></a>
             </div>
 
             <div class="CatCard">
-                <a><button>Items under $25</button></a>
+                <a href="./ItemsUnder.html?u=15"><button>Items under $15</button></a>
             </div>
 
             <div class="CatCard">
-                <a><button>Items under $50</button></a>
+                <a href="./ItemsUnder.html?u=25"><button>Items under $25</button></a>
             </div>
         </div>
     </div>
@@ -52,13 +52,13 @@ function CatAndPop(){
 
     <hr class="Space">`
 
-    if (document.URL.includes("?Page=")){
+    if (document.URL.includes("?Page=")) {
         var url = new URL(window.location.href)
         var P = url.searchParams.get("Page")
-        if(P == 1){
+        if (P == 1) {
             document.getElementById("PAGE1").innerHTML = PUSH
         }
-    }else{
+    } else {
         document.getElementById("PAGE1").innerHTML = PUSH
     }
 }
@@ -77,7 +77,7 @@ function MoreButton() {
                     var url = new URL(window.location.href)
                     var page = parseInt(url.searchParams.get("Page"))
                     MoreButtonDiv.innerHTML = `<a id="NButton" href="/?Page=${page + 1}"><button>MORE</button></a>`
-                }else{
+                } else {
                     MoreButtonDiv.innerHTML += `<a id="NButton" href="/?Page=1"><p>You have reached the end!</p>
                     <button>Back to the main page</button></a>`
                 }
