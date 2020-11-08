@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 function Append(A) {
     var search = ""
-    
-    if(A == 10){
+
+    if (A == 10) {
         search = "tien"
-    }else if(A == 15){
+    } else if (A == 15) {
         search = "vijftien"
-    }else if(A == 25){
+    } else if (A == 25) {
         search = "vijfentwintig"
-    }else{
+    } else {
         viernulvier()
         return;
     }
@@ -51,6 +51,6 @@ function CheckUnder() {
     }
 };
 
-function viernulvier(){
+function viernulvier() {
     window.location.replace("/404.html");
 }
