@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     CheckPage()
     CatAndPop()
     MoreButton()
-    GetRandom()
+    //GetRandom()
     Load()
 });
 
