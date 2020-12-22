@@ -1,5 +1,6 @@
 function SearchThis() {
     var ST = document.getElementById("S").value
+    if(ST.length < 3) return; 
     if (!ST) return;
     console.log(ST.trim())
     if (ST.trim() === "") return;
