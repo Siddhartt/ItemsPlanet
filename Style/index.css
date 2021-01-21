@@ -500,7 +500,7 @@ a{
     justify-self: center;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
 
     .content .PopularItems{
         width: 100%;
