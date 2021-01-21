@@ -339,7 +339,7 @@ a{
 }
 
 /*Start of Random Item mobile responsiveness*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {/*400*/
     .content .RandomItem{
         display: block;
         width: 350px;
